@@ -1,16 +1,16 @@
-def substrings(str, arr)
-  hash = Hash.new(0)
-  string = str.downcase.gsub(/[^a-z]/, ' ').split
+def substrings(str, dictionary)
+  histogram = Hash.new(0)
+  string_array = str.downcase.gsub(/[^a-z]/, ' ').split
 
-  arr.each do |i|
-    string.each do |n|
-      if n.include?(i)
-        hash[i] += 1
+  dictionary.each do |word_in_dictionary|
+    string_array.each do |word_in_string_array|
+      if word_in_string_array.include?(word_in_dictionary)
+        histogram[word_in_dictionary] += 1
       end
     end
   end
 
-  hash
+  histogram
 end
 
 dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
