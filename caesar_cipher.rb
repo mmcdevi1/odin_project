@@ -20,10 +20,10 @@ def caesar_cipher(str, shift)
   end
 
   new_string = ordinal_array.map { |i| i.chr }.join
-  puts new_string
+  new_string
 end
 
-caesar_cipher('HeLLo WorLd ZZZZzzZZ', 25)
-caesar_cipher('hello world', 25)
-caesar_cipher('zzzzz', 53)
+puts caesar_cipher('HeLLo WorLd ZZZZzzZZ', 25)
+puts caesar_cipher('hello world', 25)
+puts caesar_cipher('zzzzz', 53)
 
